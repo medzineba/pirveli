@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 200px;
+            height: 200px;
+            background: rgb(170, 64, 231);
+            clip-path: polygon(47% 91%, 30% 78%, 15% 64%, 6% 47%, 6% 32%, 12% 23%, 26% 20%, 37% 27%, 44% 35%, 48% 43%, 55% 34%, 63% 26%, 73% 22%, 86% 24%, 92% 42%, 86% 57%, 77% 70%, 62% 82%);
+        }
+    </style>
+</head>
+<body>
+
+    <div onclick="test()"></div>
+    <script>
+        const container = document.querySelector('div');
+        function test() {
+            container.innerText = "giga";
+        }
+    </script>
+</body>
+</html>
