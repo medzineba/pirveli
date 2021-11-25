@@ -1,0 +1,40 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#gemma {
+    width: 600px;
+    height: 300px;
+    border: 2px solid cornflowerblue;
+    position: relative;
+}
+
+.right {
+    transform: scaleX(1);
+}
+
+.left {
+    transform: scaleX(-1);
+}
+
+#kacuna {
+    user-select: none;
+    bottom:0;
+    width: 40px;
+    height: 110px;
+    background-color: royalblue;
+    position: absolute;
+    background-image: url(./indigoJonsoni.png);
+    background-attachment: cover;
+    /* left: 10px; */
+}

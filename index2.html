@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .parent {
+            position: absolute;
+            border: 10px solid;
+            border-image-slice: 1;
+            border-image-source: linear-gradient(to left, #a395bd, #d53a9d);
+            border-radius: 8px;
+            height: 500px;
+            width: 500px;
+            background: cadetblue;
+            display: grid;
+            grid-template: repeat(8, 1fr) / repeat(8, 1fr);
+            animation-duration: 1.5s;
+            animation-name: rotate;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            cursor: none !important;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        .black {
+            background: black;
+        }
+        .white {
+            background: white;
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            } to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="parent" id="parent"></div>
+    <script src="app.js"></script>
+    <script>
+        const body = document.querySelector('body');
+
+     setInterval(() => {
+         const r = Math.random() * 255 << 0;
+         const g = Math.random() * 255 << 0;
+         const b = Math.random() * 255 << 0;
+         body.style.backgroundColor = `rgb(${r}, ${g}, ${b})`
+     },100)
+</script>
+</body>
+</html>
